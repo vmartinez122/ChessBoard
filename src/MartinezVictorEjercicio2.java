@@ -60,6 +60,5 @@ public class MartinezVictorEjercicio2 {
             }
             System.out.println();
         }
-
     }
 }
