@@ -10,6 +10,9 @@ public class MartinezVictorEjercicio2 {
         int size;
         final int MIN_SIZE =1;
         final int MAX_SIZE = 15;
+        boolean[][]chess; //Array2D que almacena la estructura del tablerp
+        final int BOARDSIZE = 8;
+
 
         //Solicitar al usuario el carácter que usar como patrón
         System.out.println("Introduce un patrón:");
@@ -35,7 +38,28 @@ public class MartinezVictorEjercicio2 {
             input.nextLine(); //Limpiamos el búfer
         } while (true);
 
-        System.out.println(pattern+size);
+        // Generamos el tablero: (false-->casilla blanca | true-->casilla negra)
+        chess = new boolean[BOARDSIZE][BOARDSIZE]; //Formamos el Array2D
+        boolean white=false; //La primera casilla, será blanca
+        //Bucle que altera entre true y false en cada casilla del tablero:
+        for (int row=0; row < chess.length;++row){
+            for (int col=0; col<chess[0].length; ++col) {
+                chess[row][col]=white;
+                white=!white; //la siguente casilla será el inverso de esta
+            }
+        }
+
+        //Imprime el tablero (provisional)
+        for (boolean[] x:chess){
+            for (boolean y: x){
+                if (y){
+                    System.out.print(pattern);
+                }else {
+                    System.out.print(0);
+                }
+            }
+            System.out.println();
+        }
 
     }
 }
