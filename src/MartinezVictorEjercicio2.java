@@ -18,7 +18,7 @@ public class MartinezVictorEjercicio2 {
         System.out.println("Introduce un patrón:");
         do{
             pattern = input.nextLine();
-            patternErr=pattern.length()>1;
+            patternErr=pattern.length()>1||pattern.isBlank();
             if (patternErr){
                 System.out.println(ANSI_RED+"Error. Introduce 1 único carácter."+ANSI_RESET); // Mensaje de error
             }
@@ -45,10 +45,11 @@ public class MartinezVictorEjercicio2 {
         for (int row=0; row < chess.length;++row){
             for (int col=0; col<chess[0].length; ++col) {
                 chess[row][col]=white;
-                white=!white; //la siguente casilla será el inverso de esta
+                white=!white; // La siguente casilla será el inverso de esta
             }
+            white=!white;// La siguiente fila, comienza por el color que finaliza la última casilla de la fila anterior, así que volveremos a invertir el valor
         }
-
+        /*
         //Imprime el tablero (provisional)
         for (boolean[] x:chess){
             for (boolean y: x){
@@ -59,6 +60,33 @@ public class MartinezVictorEjercicio2 {
                 }
             }
             System.out.println();
+        }
+        */
+
+        for (boolean[] x:chess){
+            //Cada fila va cubierta de guiónes '-'
+            //Explicar fórmula...
+            for (int i=0;i<BOARDSIZE*(size+1)+1;i++){
+                System.out.print('-');
+            }
+            System.out.println();
+            for(int k=0;k<size;k++){
+                for (boolean y: x) {
+                    System.out.print('|');
+                    for (int j = 0; j < size; j++) {
+                        if (y) {
+                            System.out.print(pattern);
+                        } else {
+                            System.out.print(" ");
+                        }
+                    }
+                }
+                //Final de línea. Añadimos un separador adicional y hacemos un salto de línea con \n
+                System.out.print("|\n");
+            }
+        }
+        for (int i=0;i<BOARDSIZE*(size+1)+1;i++) {
+            System.out.print('-');
         }
     }
 }
