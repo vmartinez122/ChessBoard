@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3f4659d-8d71-4818-b68a-626a1b31cb4d" name="Changes" comment="Creación tablero">
+    <list default="true" id="a3f4659d-8d71-4818-b68a-626a1b31cb4d" name="Changes" comment="Bucle arreglado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MartinezVictorEjercicio2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MartinezVictorEjercicio2.java" afterDir="false" />
     </list>
@@ -95,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731623626019</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bucle arreglado">
+      <option name="closed" value="true" />
+      <created>1731627856151</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731627856151</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +121,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="User input" />
     <MESSAGE value="Creación tablero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación tablero" />
+    <MESSAGE value="Bucle arreglado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bucle arreglado" />
   </component>
 </project>
