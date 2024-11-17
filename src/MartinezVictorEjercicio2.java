@@ -10,11 +10,11 @@ public class MartinezVictorEjercicio2 {
         // debido a que el usuario puede introducir valores inválidos, que no pueden ser almacenados en tipo char
         boolean patternErr; // Variable que comprueba errores en el input del usuario
         int size; // Tamaño que tendrá cada casilla del tablero
-        // Constantes delimitando el rango del tamaño
+        // Constantes delimitando el rango del tamaño del tablero
         final int MIN_SIZE =1;
         final int MAX_SIZE = 15;
-        boolean black; //
         boolean[][]chess; // Array2D que almacena la estructura del tablerp
+        boolean black; // Variable utilizada para crear el tablero
         final int BOARD_SIZE = 8; // Constante que determina el tamaño del tablero
 
 
@@ -56,18 +56,18 @@ public class MartinezVictorEjercicio2 {
             black=!black;// La siguiente fila, comienza por el color que finaliza la última casilla de la fila anterior, así que volveremos a invertir el valor
         }
 
-        // Imprimir tablero por pantalla
+        // Imprimir tablero por pantalla:
         for (boolean[] x:chess){ // El primer bucle foreach, accede a las filas del Array2D, que almacenará en x
             // Para separar cada fila, utilizamos una barra formada de guiones, con un guión '-' por carácter en la fila
             // Sabemos cuantos carácteres tiene la fila, multiplicando el tamaño de la tabla(BOARD_SIZE) por el tamaño del patrón
-            // Además de los carácteres del patrón, tenemos 1 separador por tamaño de la tabla. Al valor total le agregamos 1, para el último separador.
+            // Además de los carácteres del patrón, tenemos 1 separador por tamaño de la tabla. Al valor total le agregamos 1, para el último separador
             for (int i=0;i<BOARD_SIZE*(size+1)+1;i++){
                 System.out.print('-');
             }
             System.out.println(); // Salto de línea al finalizar la línea
             for(int k=0;k<size;k++){ // Bucle que repite una misma fila las veces especificadas por size
                 for (boolean y:x) { // Creamos otro bucle foreach, que acceda a los carácteres dentro de los array x de las filas del primer Array2D
-                    System.out.print('|');
+                    System.out.print('|'); //Separador de cada casilla, independiente del tamaño de las casillas
                     for (int j = 0; j < size; j++) { // Bucle que repite el carácter el número especificado por size
                         if (y) { // Si la casilla en el array es y=true, imprimiremos el carácter
                             System.out.print(pattern);
@@ -76,8 +76,7 @@ public class MartinezVictorEjercicio2 {
                         }
                     }
                 }
-                // Final de línea. Añadimos un separador adicional y hacemos un salto de línea con \n
-                System.out.print("|\n");
+                System.out.print("|\n"); // Final de línea. Añadimos un separador adicional y hacemos un salto de línea con \n
             }
         }
         // Separador de guiones
