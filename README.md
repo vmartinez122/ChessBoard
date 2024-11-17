@@ -8,7 +8,7 @@ Este ejercicio, consiste en la creación de un tablero de ajedrez a partir de lo
 Para resolver este problema, he utilizado un Array2D con un valor booleano que alterna entre 0 para las casillas blancas y 1 para las casillas negras.
 A partir del array, podemos imprimir por pantalla el tablero utilizando las medidas entradas por el usuario.
 ** **
-**Variables introducidas por el usaurio:**
+**Variables introducidas por el usuario:**
 - ***pattern:*** Carácter a utilizar para representar las casillas negras. Este debe ser un único carácter y no puede ser un campo vacío.
 - ***size:*** Número que determina el tamaño de las casillas del tablero. Las casillas tendrán las dimensiones size x size, con un valor del 1 al 15.
 
